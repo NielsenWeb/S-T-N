@@ -208,59 +208,19 @@ padding-top: 9px;
 
     .hero-mobile{
         display: flex;
+        background-image: url(img/hero.jpg       );
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 1200px;
+        width: 100%;
     }
 
-
-    
-    .hero-img-mobile img{
-        max-width: 100%;
-        position: absolute;
-        z-index: -100;
-    }
-    
-    .hero-fact-mobile{
-        border-radius: 5px;
-        top: 55vw;
-        left: 5vw;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        background-color: #90E0EF;
-        width: 90%;
-        height: 30vw;
-    }
-    
-    .hero-h1-mobile {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .hero-fact-mobile h1{
-        color: white;
-        background-color: #354463;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 5vw;
-        width: 50%;
-    }
-    
-    .hero-fact-mobile p{
-        color: #354463;
-        margin: 0 50px 0 50px;
-        font-size: 4vw;
-        text-align: center;
-    }
-    
-    .hero-quote-mobile{
-        font-size: 3vw;
-        position: relative;
-        top: -15vw;
-        left: 12vw;
-        text-transform: uppercase;
+    .hero-fact{
+       
     }
 
-}
+    
+    
 
 /* 2 section */
 
