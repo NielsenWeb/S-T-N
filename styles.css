@@ -4,7 +4,11 @@
     font-family: 'Roboto', sans-serif; */
     text-decoration: none;
     margin: 0;
-    
+
+}
+
+*:visited{
+    color: inherit;
 }
 
 body{
@@ -13,9 +17,6 @@ body{
     margin: auto;
 }
 
-h1{
-    
-}
 
 p{
     font-family: 'Noto Sans JP', sans-serif  
@@ -81,10 +82,6 @@ padding-top: 9px;
     
 }
 
-.nav-button button a{
-    
-}
-
 .nav-button button:hover{
     background-color: wheat;
 }
@@ -101,25 +98,33 @@ padding-top: 9px;
 }
 
 .nav-mobile{
-    display: flex;
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 100;
 }
 
 .nav-mobile-wrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 300;
-    position: fixed;
+    
+    
     width: 100%;
     background-color: #03045E;
 }
 
 .nav-mobile-logo{
-    margin-left: 20vw;
+    margin-right: 10px;
 }
 
 .nav-mobile-logo img{
-    height: 50px;
+    padding-top: 3px;
+    height: 40px;
+}
+
+.nav-mobile-logo img:hover{
+    cursor: pointer;
 }
 
 
@@ -129,15 +134,50 @@ padding-top: 9px;
     border: none;
     font-size: 1rem;
     height: 2rem;
-    min-width: 108;
-    margin-top: 10px;
-    margin-right: 5px;
+    min-width: 150px;
+    margin-top: 7px;
+    color: black;
+}
+
+.nav-mobile-button button:hover{
+    background-color: wheat;
+    color: black;
+    cursor: pointer;
 }
 
 .nav-mobile-burger{
     color: white;
-    margin-top: 17px;
-    margin-left: 5px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.nav-mobile-burger i:hover{
+    color: wheat;
+    cursor: pointer;
+}
+
+.nav-mobile-drop{
+    height: 200px;
+    width: 150px;
+    background-color: rgba(3, 4, 94, 0.8);
+}
+
+.nav-mobile-menu{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.nav-mobile-menu a{
+    padding-bottom: 3vw;
+    font-size: 4vw;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.nav-mobile-menu a:hover{
+    color: wheat;
 }
 
 }
@@ -208,17 +248,57 @@ padding-top: 9px;
 
     .hero-mobile{
         display: flex;
+        flex-direction: column;
         background-image: url(img/hero-mobile3.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        height: 1200px;
+        height: 650px;
         width: 100%;
     }
 
-    .hero-fact{
-       
+    .hero-quote-mobile{
+        line-height: 7vw;
+        font-size: 5vw;
+        font-family: 'Bebas Neue', cursive;
+        padding-top: 30vw;
+        padding-left: 12vw;
     }
 
+    .hero-fact-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 65vw 0 0 16vw;
+        background-color: rgba(53, 68, 99, 0.65);
+        width: 70vw;
+        height: 27vw;
+    }
+    
+    .hero-fact-h1-mobile{
+        
+        background-color: #354463;
+        width: 25vw;
+        height: 10vw;
+        text-align: center;
+        margin-top: 10px; 
+    }
+    
+    .hero-fact-h1-mobile h1{
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 4vw;
+        padding-top: 1.2vw;
+    }
+    
+    .hero-fact-mobile p{
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 4vw;
+        text-align: center;
+        color: white;
+    }
+    
+
+}
     
     
 
