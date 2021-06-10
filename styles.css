@@ -101,7 +101,7 @@ padding-top: 9px;
     position: fixed;
     display: block;
     width: 100%;
-    z-index: 100;
+    z-index: 200;
 }
 
 .nav-mobile-wrapper{
@@ -156,13 +156,17 @@ padding-top: 9px;
     cursor: pointer;
 }
 
-.nav-mobile-drop{
+#nav-mobile-drop{
+    position: fixed;
+    z-index: 200;
+    top: 46px;
+    display: none;
     height: 200px;
     width: 150px;
     background-color: rgba(3, 4, 94, 0.8);
 }
 
-.nav-mobile-menu{
+.nav-mobile-menu{ 
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -178,6 +182,15 @@ padding-top: 9px;
 
 .nav-mobile-menu a:hover{
     color: wheat;
+}
+
+#close-layer{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    width: 500px;
+    background-color: rgba(138, 43, 226, 0);
 }
 
 }
