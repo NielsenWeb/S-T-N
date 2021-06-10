@@ -3,10 +3,12 @@
     /* font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Roboto', sans-serif; */
     text-decoration: none;
+    margin: 0;
     
 }
 
 body{
+
     max-width: 1920px;
     margin: auto;
 }
@@ -20,6 +22,7 @@ p{
 }
 
 .nav-screen{
+    top: 0px;
     z-index: 100;
     position: fixed;
     width: 100%;
@@ -27,7 +30,6 @@ p{
 
 .nav-wrapper{
     font-family: 'Noto Sans JP', sans-serif;
-    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: #03045E;
@@ -46,10 +48,10 @@ p{
 
 .nav-menu{
     
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding-top: 15px;
+    padding-top: 5px;
     
 }
 
@@ -64,7 +66,7 @@ p{
 
 .nav-button{
 padding-right: 2vw;
-padding-top: 10px;
+padding-top: 9px;
 
 }
 
@@ -72,9 +74,14 @@ padding-top: 10px;
     background-color: #90E0EF;
     border: none;
     font-size: 1.5rem;
+    padding-bottom: 20px;
     height: 2rem;
     width: 15vw;
     min-width: 164px;
+    
+}
+
+.nav-button button a{
     
 }
 
@@ -139,59 +146,53 @@ padding-top: 10px;
 
 
 /* 1 section */
-
-
-
-.hero-img img{
-    max-width: 100%;
-    position: absolute;
-    z-index: -100;
+.hero-screen{
+    background-image: url(img/hero.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1075px;
 }
 
 .hero-fact{
-    top: 20vw;
-    left: 13vw;
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    background-color: rgba(53, 68, 99, 0.66);
-    width: 25%;
-    height: 17vw;
+    align-items: center;
+    position: relative;
+    top: 21vw;
+    left: 15vw;
+    background-color: rgba(53, 68, 99, 0.65);
+    width: 33vw;
+    height: 23vw;
 }
 
-.hero-h1 {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-fact h1{
-    font-family: 'Roboto', sans-serif;
-    padding-top: 2%;
-    box-sizing: border-box;
-    color: white;
+.hero-fact-h1{
+    
     background-color: #354463;
+    width: 12vw;
+    height: 3.4vw;
     text-align: center;
-    font-size: 1.25vw;
-    width: 45%;
-    height: 60%;
+    margin-top: 10px; 
+}
+
+.hero-fact-h1 h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    padding-top: 0.7vw;
 }
 
 .hero-fact p{
-    color: white;
-    margin: 0 50px 0 50px;
-    font-size: 2.3vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 3vw;
     text-align: center;
+    color: white;
 }
 
 .hero-quote{
     line-height: 4vw;
-    font-family: 'Bebas Neue', cursive;
     font-size: 3vw;
-    position: relative;
-    top: 6vw;
-    left: 75vw;
-    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 75vw;
 }
 
 .hero-mobile{
