@@ -79,16 +79,78 @@ p {
   background-color: wheat;
 }
 
+#modal-donation-screen {
+display: none;
+background-color: rgba(53, 68, 99, 0.65);
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: 1000;
+}
+
+#modal-front-screen {
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: "Bebas Neue", cursive;
+background-color: brown;
+margin-top: 20vw;
+margin-left: 15vw;
+height: 400px;
+width: 70vw;
+}
+
+#icons-modal-screen {
+display: flex;
+flex-direction: column;
+}
+
+#close-icon-screen {
+padding-left: 60vw;
+padding-top: 3vw;
+}
+
+#close-icon-screen:active {
+color: wheat;
+}
+
+#close-icon-screen:hover {
+cursor: pointer;
+}
+
+#triangle-icon-screen {
+padding-top: 50px;
+padding-left: 28vw;
+}
+
+#modal-front-screen h1 {
+text-align: center;
+padding: 50px 10vw 0 10vw;
+}
+
 .nav-mobile {
+  display: none;
+}
+
+#nav-mobile-drop{
+  display: none;
+}
+
+#modal-donation{
   display: none;
 }
 
 /* nav mobile */
 
 @media only screen and (max-width: 784px) {
+
   .nav-screen {
     display: none;
     transition: 3s;
+  }
+
+  #nav-mobile-drop{
+    display: block;
   }
 
   .nav-mobile {
