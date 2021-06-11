@@ -1,24 +1,25 @@
 var dropMenu = document.getElementById('nav-mobile-drop');
-var closeLayer = document.getElementById('close-layer') 
+var closeLayer = document.getElementById('close-layer');
 
 
 
 function dropDown(){
     
-    if(dropMenu.style.display == 'block'){
-        dropMenu.style.display = 'none'
-        closeLayer.style.display = 'none'
+    
+
+    if(dropMenu.style.width == '250px'){
+        dropMenu.style.width = '0';
+        closeLayer.style.display = 'block';
     }
 
     else{
-        
-        dropMenu.style.display = 'block'
-        closeLayer.style.display = 'block'
-
+        closeLayer.style.display = 'none';
+        dropMenu.style.width = '250px';
     }
+    
 }
 
-function closeDropDownOnLayer(){
-    dropMenu.style.display = 'none'
+function closeDropDown(){
     closeLayer.style.display = 'none'
+    dropMenu.style.width = '0'
 }

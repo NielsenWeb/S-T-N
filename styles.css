@@ -95,6 +95,7 @@ padding-top: 9px;
 @media only screen and (max-width: 784px){
 .nav-screen{
     display: none;
+    transition: 3s;
 }
 
 .nav-mobile{
@@ -102,16 +103,15 @@ padding-top: 9px;
     display: block;
     width: 100%;
     z-index: 200;
+
 }
 
 .nav-mobile-wrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    
     width: 100%;
-    background-color: #03045E;
+    background-color: rgba(3, 4, 94, 0.9);
 }
 
 .nav-mobile-logo{
@@ -146,6 +146,7 @@ padding-top: 9px;
 }
 
 .nav-mobile-burger{
+    z-index: 400;
     color: white;
     margin-top: 7px;
     margin-left: 10px;
@@ -157,13 +158,16 @@ padding-top: 9px;
 }
 
 #nav-mobile-drop{
+    height: 100%;
+    width: 0;
     position: fixed;
     z-index: 200;
-    top: 46px;
-    display: none;
-    height: 200px;
-    width: 150px;
-    background-color: rgba(3, 4, 94, 0.8);
+    top: 47px;
+    left: 0;
+    background-color: rgba(3, 4, 94, 0.9);
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 60px;
 }
 
 .nav-mobile-menu{ 
