@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="styles.css" />
-    
-    <script src="https://kit.fontawesome.com/578eca7298.js" crossorigin="anonymous"></script>
-    
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script
+      src="https://kit.fontawesome.com/578eca7298.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
 
     <title>S-T-N</title>
-
   </head>
   <body>
     <!-- navbar -->
@@ -42,94 +49,101 @@
 
     <!-- nav mobile -->
     <nav class="nav-mobile">
-        <div class="nav-mobile-wrapper">
-
-            <div class="nav-mobile-burger" onclick="dropDown()">
-                <i class="fas fa-bars fa-2x"></i>
-            </div>
-            
-            <div class="nav-mobile-button">
-                <button>Donate Today</button>
-            </div>
-
-            <div class="nav-mobile-logo">
-              <a href="#"><img src="img/droplogo-nav.png" alt=""></a>
-          </div>
-
+      <div class="nav-mobile-wrapper">
+        <div class="nav-mobile-burger" onclick="dropDown()">
+          <i class="fas fa-bars fa-2x"></i>
         </div>
 
-        
+        <div class="nav-mobile-button">
+          <button onclick="openModalDonation()">Donate Today</button>
+        </div>
+
+        <div class="nav-mobile-logo">
+          <a href="#"><img src="img/droplogo-nav.png" alt="" /></a>
+        </div>
+      </div>
     </nav>
 
     <nav>
-    <div id="nav-mobile-drop">
-      <div class="nav-mobile-menu">
-        <a onclick="closeDropDown()" href="#">We Support</a>
-        <a onclick="closeDropDown()" href="#">Values</a>
-        <a onclick="closeDropDown()" href="#">Shop</a>
-        <a onclick="closeDropDown()" href="#">Contact</a>
+      <div id="nav-mobile-drop">
+        <div class="nav-mobile-menu">
+          <a onclick="closeDropDown()" href="#">We Support</a>
+          <a onclick="closeDropDown()" href="#">Values</a>
+          <a onclick="closeDropDown()" href="#">Shop</a>
+          <a onclick="closeDropDown()" href="#">Contact</a>
+        </div>
       </div>
-  </div>
 
-    <div id="close-layer" onclick="closeDropDown()">
-      
+      <div id="close-layer" onclick="closeDropDown()"></div>
+    </nav>
+
+    <div id="modal-donation">
+      <div id="modal-front">
+        <div id="icons-modal">
+          <div id="close-icon">
+            <i  class="fas fa-times fa-lg" onclick="closeModalDonation()"></i>
+          </div>
+          <div id="triangle-icon">
+            <i class="fas fa-exclamation-triangle fa-5x"></i>
+          </div>
+        </div>
+        <h1>DONTAIONS IS NOT AVAILABLE AT THE MOMENT</h1>
+      </div>
     </div>
-  </nav>
 
-    
     <!-- 1 section -->
     <section class="hero-screen">
-      
       <div class="-hero-wrapper">
-      
         <div class="hero-fact">
           <div class="hero-fact-h1">
             <h1>THE ISSUE</h1>
           </div>
-          
-          <p>Climate change poses the biggest threat to women in developing nations</p>
+
+          <p>
+            Climate change poses the biggest threat to women in developing
+            nations
+          </p>
         </div>
 
         <div class="hero-quote">
-          <h1>#stop <br>
-             climate <br>
-              change</h1>
+          <h1>
+            #stop <br />
+            climate <br />
+            change
+          </h1>
         </div>
-    
       </div>
     </section>
 
     <!-- 1 section mobile -->
-   
 
     <section class="hero-mobile">
       <div class="-hero-wrapper-mobile">
-
         <div class="hero-quote-mobile">
-          <h1>#stop <br>
-             climate <br>
-              change</h1>
+          <h1>
+            #stop <br />
+            climate <br />
+            change
+          </h1>
         </div>
-      
+
         <div class="hero-fact-mobile">
           <div class="hero-fact-h1-mobile">
             <h1>THE ISSUE</h1>
           </div>
-          
-          <p>Climate change poses the biggest threat to women in developing nations</p>
-        </div>
 
- 
-    
+          <p>
+            Climate change poses the biggest threat to women in developing
+            nations
+          </p>
+        </div>
       </div>
     </section>
 
-      <!-- 2 section -->
+    <!-- 2 section -->
 
-      <div class="s2"></div>
-      
-      
-      <script src="script.js"></script>
+    <div class="s2"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
-
