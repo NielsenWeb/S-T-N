@@ -3,7 +3,7 @@
 var dropMenu = document.getElementById("nav-mobile-drop");
 var closeLayer = document.getElementById("close-layer");
 var modalDonation = document.getElementById('modal-donation')
-var modalDonation = document.getElementById('modal-donation-screen')
+var modalDonationScreen = document.getElementById('modal-donation-screen')
 
 
 function dropDown() {
@@ -29,6 +29,14 @@ function openModalDonation() {
 
 function closeModalDonation(){
     modalDonation.style.display = 'none'
+}
+
+function openModalDonationScreen(){
+  modalDonationScreen.style.display = 'block'
+}
+
+function closeModalDonationScreen(){
+  modalDonationScreen.style.display = 'none'
 }
 
 
