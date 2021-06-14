@@ -1,9 +1,10 @@
-/* Navbar */
+
 * {
   /* font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Roboto', sans-serif; */
   text-decoration: none;
   margin: 0;
+  box-sizing: border-box;
 }
 
 *:visited {
@@ -11,6 +12,7 @@
 }
 
 body {
+  background-color: #023E8A;
   max-width: 1920px;
   margin: auto;
 }
@@ -18,6 +20,8 @@ body {
 p {
   font-family: "Noto Sans JP", sans-serif;
 }
+
+/* Navbar */
 
 .nav-screen {
   top: 0px;
@@ -416,3 +420,48 @@ padding: 50px 10vw 0 10vw;
   height: 400px;
   background-color: #0077b6;
 }
+
+/* 4. section Slideahow */
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  
+  margin-top: 100px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Fading animation */
+.fade {
+  animation: fadeOut 5s;
+  animation: fadeIn 5s;
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+
