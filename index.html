@@ -40,10 +40,9 @@
           <a href="">Values</a>
           <a href="">Shop</a>
           <a href="">Contact</a>
+            <button onclick="openModalDonationScreen()">Donate Today</button>
         </div>
-        <div class="nav-button">
-          <button onclick="openModalDonationScreen()">Donate Today</button>
-        </div>
+       
       </div>
     </nav>
 
@@ -159,7 +158,6 @@
 
     <div class="slideshow-container">
 
-      <!-- Full-width images with number and caption text -->
       <div class="mySlides fade" id="fading">
         <img src="img/slide-boat.png" style="width:100%">
       </div>
@@ -175,27 +173,27 @@
 
       <!-- contact -->
       <section class="contact">
-        <div class="contact-wrapper">
-          <div class="contact-forms">
-            <form>
+        <div class="contact-form-img">
+          <div class="contact-left">
+            <h1>CONTACT</h1>
+            <form action="/" name="contact">
               
-              <div class="left-form">
-              <label for="firstname">First name:</label><br>
-              <input type="text" id="firstname" name="firstname"><br>
+              <label for="fname"><i class="fas fa-user-edit fa-2x"></i></label><br>
+              <input id="fname-input" type="text"  name="fname" value="John" ><br><br>
+             
+              <label for="lname"><i class="far fa-user fa-2x"></i></label><br>
+              <input type="text" id="lname-input" name="lname" value="Doe" ><br><br>
               
-              <label for="lastname">Last name:</label><br>
-              <input type="text" id="lastname" name="lastname"><br>
+              <label for="email"><i class="far fa-envelope fa-2x"></i></label><br>
+              <input id="email-input" type="text" id="email" name="email" value="Doe" required><br><br>
               
-              <label for="email">Email:</label><br>
-              <input type="email" id="email" name="email"><br>
-            </div>
-
-            <div class="form-right">
-              <label for="comment">Comment</label><br>
-              <input type="text" id="comment" name="comment">
-            </div>
+              <label for="comment"><i class="far fa-comment fa-2x"></i></label><br>
+              <textarea id="input-comment" type="textarea" id="textarea" name="textarea" value="Doe"></textarea><br><br>
+              
+              <input onclick="ValidateEmail(document.contact.email); validateLname(); validateFname(); " id="form-submit" type="submit" value="Submit">
             </form>
           </div>
+
           <div class="contact-img">
             <img src="img/quokkabottles-q-7T5hYd1gU-unsplash.jpg" alt="">
           </div>
