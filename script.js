@@ -59,3 +59,13 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 10000);
 }
+
+fadeOut();
+
+function fadeOut() {
+  if (document.getElementById('fading').style.opacity == '1') {
+
+  console.log('test')
+  }
+
+}

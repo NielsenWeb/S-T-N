@@ -414,12 +414,18 @@ padding: 50px 10vw 0 10vw;
   }
 }
 
+
+
+
 /* 2 section */
 
 .s2 {
   height: 400px;
   background-color: #0077b6;
 }
+
+
+
 
 /* 4. section Slideahow */
 
@@ -436,32 +442,76 @@ padding: 50px 10vw 0 10vw;
   display: none;
 }
 
-/* Fading animation */
 .fade {
-  animation: fadeOut 5s;
-  animation: fadeIn 5s;
-  
+  -webkit-animation: fadeinout 2s linear;
+  animation: fadeinout 2s linear;
+  animation-delay: 5s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+@-webkit-keyframes fadeinout {
+0% { opacity: 0; }
+100% { opacity: 1;}
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
+}
 
-  to {
-    opacity: 0;
-  }
+.fade {
+  -webkit-animation: fadeout 2s linear;
+  animation: fadeout 2s linear;
+  animation-delay: 6s;
+}
+
+@-webkit-keyframes fadeinout {
+0% { opacity: 1; }
+100% { opacity: 0;}
+}
+
+@keyframes fadeinout {
+  0% { opacity: 1; }
+  100% { opacity: 0;}
 }
 
 
+/* contact */
+.contact{
+  margin-top: 100px;
+  width: 100%;
+  background-color: #03045E;
+  height: 600px;
+}
+
+.contact-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-forms{
+  width: 50%;
+}
+
+.contact-forms form{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.contact-forms label{
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+}
+
+#firstname, #lastname, #email{
+  width: 20vw;
+  height: 2rem;
+  margin-bottom: 30px;
+}
+
+
+.contact-img img{
+  margin-right: 170px;
+  max-width: 600px;
+}
 
