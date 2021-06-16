@@ -107,6 +107,14 @@
     <!-- 1 section -->
     <section class="hero-screen">
       <div class="-hero-wrapper">
+        <div class="hero-quote">
+          <h1>
+            #stop <br />
+            climate <br />
+            change
+          </h1>
+        </div>
+
         <div class="hero-fact">
           <div class="hero-fact-h1">
             <h1>THE ISSUE</h1>
@@ -118,13 +126,7 @@
           </p>
         </div>
 
-        <div class="hero-quote">
-          <h1>
-            #stop <br />
-            climate <br />
-            change
-          </h1>
-        </div>
+      
       </div>
     </section>
 
@@ -178,19 +180,30 @@
             <h1>CONTACT</h1>
             <form action="/" name="contact">
               
-              <label for="fname"><i class="fas fa-user-edit fa-2x"></i></label><br>
-              <input id="fname-input" type="text"  name="fname" value="John" ><br><br>
+              <div class="fname-wrapper">
+              <label for="fname"><i class="fas fa-user-edit fa-2x"></i></label>
+              <input id="fname-input" type="text"  name="fname">
+              </div>
              
-              <label for="lname"><i class="far fa-user fa-2x"></i></label><br>
-              <input type="text" id="lname-input" name="lname" value="Doe" ><br><br>
+              <div class="lname-wrapper">
+              <label for="lname"><i class="far fa-user fa-2x"></i></label>
+              <input type="text" id="lname-input" name="lname">
+              </div>
               
-              <label for="email"><i class="far fa-envelope fa-2x"></i></label><br>
-              <input id="email-input" type="text" id="email" name="email" value="Doe" required><br><br>
+              <div class="email-wrapper">
+              <label for="email"><i class="far fa-envelope fa-2x"></i></label>
+              <input id="email-input" type="text" id="email" name="email">
+              </div>
               
-              <label for="comment"><i class="far fa-comment fa-2x"></i></label><br>
-              <textarea id="input-comment" type="textarea" id="textarea" name="textarea" value="Doe"></textarea><br><br>
+              <div class="comment-wrapper">
               
-              <input onclick="ValidateEmail(document.contact.email); validateLname(); validateFname(); " id="form-submit" type="submit" value="Submit">
+              <label for="comment"><i class="far fa-comment fa-2x"></i></label>
+              <textarea id="input-comment" type="textarea" id="textarea" name="textarea" ></textarea>
+              </div>
+              
+              <div class="submit-wrapper">
+              <button onclick="ValidateEmail(document.contact.email); validateLname(); validateFname(); " id="form-submit" type="submit" value="Submit">submit</button>
+              </div>
             </form>
           </div>
 

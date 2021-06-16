@@ -20,6 +20,10 @@ p {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+textarea{
+  resize: none;
+}
+
 /* Navbar */
 
 .nav-screen {
@@ -34,7 +38,6 @@ p {
   display: flex;
   justify-content: space-between;
   background-color: #03045e;
-
   height: 50px;
 }
 
@@ -57,7 +60,7 @@ p {
 
 .nav-menu a {
   color: white;
-  margin-right: 50px;
+  margin-right: 2vw;
 }
 
 .nav-menu a:hover {
@@ -213,7 +216,7 @@ p {
     width: 0;
     position: fixed;
     z-index: 200;
-    top: 47px;
+    top: 44px;
     left: 0;
     background-color: rgba(3, 4, 94, 0.9);
     overflow-x: hidden;
@@ -303,7 +306,7 @@ p {
   background-image: url(img/hero.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 1075px;
+  height: 60vw;
 }
 
 .hero-fact {
@@ -311,17 +314,17 @@ p {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 21vw;
-  left: 15vw;
+  top: 170px;
+  left: 300px;
   background-color: rgba(53, 68, 99, 0.65);
-  width: 33vw;
-  height: 23vw;
+  height: 150px;
+  width: 500px;
 }
 
 .hero-fact-h1 {
   background-color: #354463;
-  width: 12vw;
-  height: 3.4vw;
+  width: 180px;
+  height: 50px;
   text-align: center;
   margin-top: 10px;
 }
@@ -329,22 +332,24 @@ p {
 .hero-fact-h1 h1 {
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: 1.5vw;
-  padding-top: 0.7vw;
+  font-weight: 500;
+  font-size: 2rem;
+  padding-top: 7px;
 }
 
 .hero-fact p {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 3vw;
+  font-size: 1.5rem;
   text-align: center;
   color: white;
+  margin: 0 15px 0 15px;
 }
 
 .hero-quote {
-  line-height: 4vw;
-  font-size: 3vw;
+  line-height: 4rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", cursive;
-  padding-left: 75vw;
+  padding: 250px 0 0 460px;
 }
 
 .hero-mobile {
@@ -352,6 +357,49 @@ p {
 }
 
 /* 1 section mobile */
+
+@media only screen and (max-width: 1340px) {
+  .hero-quote {
+    padding: 200px 0 0 300px;
+  }
+
+  .hero-fact {
+    top: 70px;
+    left: 140px;
+    height: 150px;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-fact {
+    top: 5vw;
+    left: 6vw;
+    height: 200px;
+    width: 400px;
+  }
+
+  .hero-fact-h1 {
+    width: 180px;
+    height: 50px;
+  }
+
+  .hero-fact-h1 h1 {
+    font-size: 2rem;
+    padding-top: 7px;
+  }
+
+  .hero-fact p {
+    font-size: 1.5rem;
+    margin: 0 15px 0 15px;
+  }
+
+  .hero-quote {
+    line-height: 2.7rem;
+    font-size: 2rem;
+    padding: 80px 0 0 200px;
+  }
+}
 
 @media only screen and (max-width: 784px) {
   .hero-screen {
@@ -364,7 +412,7 @@ p {
     background-image: url(img/hero-mobile3.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 650px;
+    height: 150vw;
     width: 100%;
   }
 
@@ -481,71 +529,124 @@ p {
 
 /* contact */
 
-.contact {
-  margin-top: 5vh;
+.contact{
+  margin: 100px 0 0 0;
   background-color: #03045e;
+
 }
 
-.contact-form-img {
+.contact-form-img{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
-.contact-form-img img {
-  margin-right: 7vw;
-  height: 40vw;
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
 }
 
-.contact-left {
-  margin: 2vw 0 0 20vw;
+.contact-left h1{
+  font-family: 'Roboto', sans-serif; 
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 2vw 0;
 }
 
-.contact-left h1 {
-  margin-left: 7vw;
-  font-family: "Roboto", sans-serif;
+.contact label{
   color: white;
 }
 
-.contact-left form {
-  margin-top: 3vw;
-  color: white;
-}
-
-.contact-left label {
-  text-transform: uppercase;
+.contact input{
   font-family: "Noto Sans JP", sans-serif;
-}
-
-.contact-left input {
-  font-family: "Noto Sans JP", sans-serif;
-  border: 2px;
   background-color: #354463;
-  color: white;
-  height: 2rem;
-  width: 20vw;
-}
-
-#input-comment {
-  font-family: "Noto Sans JP", sans-serif;
-  color: whitesmoke;
-  width: 20vw;
   border: none;
+  width: 340px;
+  height: 2rem;
+  color: white;
+  margin: 0 0 5px 0;
+  border: 1px;
+}
+
+.contact textarea{
+  font-family: "Noto Sans JP", sans-serif;
   background-color: #354463;
+  color: white;
+  border: none;
+  width: 340px;
   height: 10vw;
+  resize: none;
+  margin: 7px 0 0 0;
 }
 
-#form-submit {
-  text-transform: uppercase;
-  color: black;
-  font-family: "Roboto", sans-serif;
-  background-color: #90e0ef;
-  height: 2rem;
+.contact-form-img img{
+  width: 40vw;
+  margin: 0 7vw 0 0;
+}
+
+.fname-wrapper label{
+  margin: 0 5px 0 0;
+}
+
+.lname-wrapper label{
+  margin: 0 18px 0 0;
+}
+
+.email-wrapper label{
+  margin: 0 15px 0 0;
+}
+
+.comment-wrapper label{
+  vertical-align: top;
+  margin: 0 15px 30px 0;
+  padding-bottom: 40px;
+}
+
+.submit-wrapper{
+  margin: 1vw 0 0 51px;
+}
+
+.submit-wrapper button{
   border: none;
+  background-color: #90e0ef;
+  color: black;
+  font-family: 'Roboto', sans-serif;  
   font-size: 1.5rem;
+  text-transform: uppercase;
+  width: 340px;
+  height: 2rem;
 }
 
-#form-submit:hover {
-  background-color: wheat;
+.submit-wrapper button:hover{
   cursor: pointer;
+}
+
+.submit-wrapper button:active{
+  background-color: wheat;
+}
+
+@media only screen and (max-width: 899px){
+  .contact{
+    background-image: url(img/quokkabottles-q-7T5hYd1gU-unsplash.jpg);
+    background-size: 100%;
+
+    background-repeat: no-repeat;
+    height: 100vw;
+  }
+
+  .contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25vw 0 0 0;
+    
+    
+  }
+
+  .contact-img{
+    display: none;
+  }
 }
