@@ -40,9 +40,10 @@ window.onscroll = function () {
 /* mobile Dropdown */
 
 function dropDown() {
-  if (dropMenu.style.width == "150px") {
+  if (dropMenu.style.width == "200px") {
     dropMenu.style.width = "0";
     closeLayer.style.display = "none";
+    closeDropDown();
   } else {
     closeLayer.style.display = "block";
     dropMenu.style.width = "200px";

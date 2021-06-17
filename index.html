@@ -36,21 +36,24 @@
           /></a>
         </div>
         <div class="nav-menu">
-          <a href="#slideshow">We Support</a>
-          <a href="#contact">Values</a>
+          <a href="#slideshow">Slideshow</a>
+          <a href="">Values</a>
           <a href="">Shop</a>
-          <a href="">Contact</a>
-            <button onclick="openModalDonationScreen()">Donate Today</button>
+          <a href="#contact">Contact</a>
+          <button onclick="openModalDonationScreen()">Donate Today</button>
         </div>
-       
       </div>
     </nav>
 
+    <!-- Modal donation for Screen -->
     <div id="modal-donation-screen">
       <div class="donation-front" id="modal-front-screen">
         <div id="icons-modal-screen">
           <div id="close-icon-screen">
-            <i  class="fas fa-times fa-lg" onclick="closeModalDonationScreen()"></i>
+            <i
+              class="fas fa-times fa-lg"
+              onclick="closeModalDonationScreen()"
+            ></i>
           </div>
           <div id="triangle-icon-screen">
             <i class="fas fa-exclamation-triangle fa-5x"></i>
@@ -77,10 +80,11 @@
       </div>
     </nav>
 
+    <!-- Mobile dropdown menu -->
     <nav>
       <div id="nav-mobile-drop">
         <div class="nav-mobile-menu">
-          <a onclick="closeDropDown()" href="#slideshow">We Support</a>
+          <a onclick="closeDropDown()" href="#slideshow">Slideshow</a>
           <a onclick="closeDropDown()" href="#">Values</a>
           <a onclick="closeDropDown()" href="#">Shop</a>
           <a onclick="closeDropDown()" href="#contact">Contact</a>
@@ -90,11 +94,12 @@
       <div id="close-layer" onclick="closeDropDown()"></div>
     </nav>
 
+    <!-- Modal donation for mobile -->
     <div id="modal-donation">
       <div id="modal-front">
         <div id="icons-modal">
           <div id="close-icon">
-            <i  class="fas fa-times fa-lg" onclick="closeModalDonation()"></i>
+            <i class="fas fa-times fa-lg" onclick="closeModalDonation()"></i>
           </div>
           <div id="triangle-icon">
             <i class="fas fa-exclamation-triangle fa-5x"></i>
@@ -104,7 +109,7 @@
       </div>
     </div>
 
-    <!-- 1 section -->
+    <!-- Hero img -->
     <section class="hero-screen">
       <div class="-hero-wrapper">
         <div class="hero-quote">
@@ -125,100 +130,78 @@
             nations
           </p>
         </div>
-
-      
       </div>
     </section>
 
-    <!-- 1 section mobile -->
-
-    <section class="hero-mobile">
-      <div class="-hero-wrapper-mobile">
-        <div class="hero-quote-mobile">
-          <h1>
-            #stop <br />
-            climate <br />
-            change
-          </h1>
-        </div>
-
-        <div class="hero-fact-mobile">
-          <div class="hero-fact-h1-mobile">
-            <h1>THE ISSUE</h1>
-          </div>
-
-          <p>
-            Climate change poses the biggest threat to women in developing
-            nations
-          </p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 4. section Slideahow -->
+    <!-- Slideahow -->
 
     <div class="slideshow-container" id="slideshow">
+      <div class="mySlides fade">
+        <img src="img/slide-boat.png" style="width: 100%" />
+      </div>
 
       <div class="mySlides fade">
-        <img src="img/slide-boat.png" style="width:100%">
+        <img src="img/slide-green-drop.jpg.png" style="width: 100%" />
       </div>
-    
-      <div class="mySlides fade">
-        <img src="img/slide-green-drop.jpg.png" style="width:100%">
-      </div>
-    
-      <div class="mySlides fade">
-        <img src="img/slide-drop.png" style="width:100%">
-      </div>
-    
 
-      <!-- contact -->
-      <section class="contact" id="contact">
-        <div class="contact-form-img">
-          <div class="contact-left">
-            <h1>CONTACT</h1>
-            <form action="/" name="contact">
-              
-              <div class="fname-wrapper">
+      <div class="mySlides fade">
+        <img src="img/slide-drop.png" style="width: 100%" />
+      </div>
+    </div>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="contact-form-img">
+        <div class="contact-left">
+          <h1>CONTACT</h1>
+          <form action="/" name="contact">
+            <div class="fname-wrapper">
               <label for="fname"><i class="fas fa-user-edit fa-2x"></i></label>
-              <input id="fname-input" type="text"  name="fname">
-              </div>
-             
-              <div class="lname-wrapper">
-              <label for="lname"><i class="far fa-user fa-2x"></i></label>
-              <input type="text" id="lname-input" name="lname">
-              </div>
-              
-              <div class="email-wrapper">
-              <label for="email"><i class="far fa-envelope fa-2x"></i></label>
-              <input id="email-input" type="text" id="email" name="email">
-              </div>
-              
-              <div class="comment-wrapper">
-              
-              <label for="comment"><i class="far fa-comment fa-2x"></i></label>
-              <textarea id="input-comment" type="textarea" id="textarea" name="textarea" ></textarea>
-              </div>
-              
-              <div class="submit-wrapper">
-              <button onclick="ValidateEmail(document.contact.email); validateLname(); validateFname(); " id="form-submit" type="submit" value="Submit">submit</button>
-              </div>
-            </form>
-          </div>
+              <input id="fname-input" type="text" name="fname" />
+            </div>
 
-          <div class="contact-img">
-            <img src="img/quokkabottles-q-7T5hYd1gU-unsplash.jpg" alt="">
-          </div>
+            <div class="lname-wrapper">
+              <label for="lname"><i class="far fa-user fa-2x"></i></label>
+              <input type="text" id="lname-input" name="lname" />
+            </div>
+
+            <div class="email-wrapper">
+              <label for="email"><i class="far fa-envelope fa-2x"></i></label>
+              <input id="email-input" type="text" id="email" name="email" />
+            </div>
+
+            <div class="comment-wrapper">
+              <label for="comment"><i class="far fa-comment fa-2x"></i></label>
+              <textarea
+                id="input-comment"
+                type="textarea"
+                id="textarea"
+                name="textarea"
+              ></textarea>
+            </div>
+
+            <div class="submit-wrapper">
+              <button
+                onclick="ValidateEmail(document.contact.email); validateLname(); validateFname(); "
+                id="form-submit"
+                type="submit"
+                value="Submit"
+              >
+                submit
+              </button>
+            </div>
+          </form>
         </div>
 
-      </section>
+        <div class="contact-img">
+          <img src="img/quokkabottles-q-7T5hYd1gU-unsplash.jpg" alt="" />
+        </div>
+      </div>
+    </section>
 
-     <!-- 2 section -->
-
-    <div class="s2"></div>
+    <!-- fill -->
+    <div class="fill"></div>
 
     <script src="script.js"></script>
   </body>
 </html>
-
