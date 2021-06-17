@@ -1,3 +1,8 @@
+/* Navbar hide */
+var prevScrollpos = window.pageYOffset;
+var navSreen = document.getElementById("navbar-screen");
+var navMobile = document.getElementById("navbar-mobile");
+
 /* DropDown  */
 var dropMenu = document.getElementById("nav-mobile-drop");
 var closeLayer = document.getElementById("close-layer");
@@ -18,6 +23,20 @@ var lnameInput = document.getElementById("lname-input");
 
 showSlides();
 
+/* navbar hide */
+
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    navSreen.style.top = "0";
+    navMobile.style.top = "0";
+  } else {
+    navSreen.style.top = "-50px";
+    navMobile.style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+
 /* mobile Dropdown */
 
 function dropDown() {
@@ -26,7 +45,7 @@ function dropDown() {
     closeLayer.style.display = "none";
   } else {
     closeLayer.style.display = "block";
-    dropMenu.style.width = "150px";
+    dropMenu.style.width = "200px";
   }
 }
 
@@ -65,7 +84,7 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 10000);
+  setTimeout(showSlides, 15000);
 }
 
 /* contact form validation */

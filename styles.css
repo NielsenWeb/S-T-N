@@ -10,6 +10,10 @@
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #023e8a;
   max-width: 1920px;
@@ -20,7 +24,7 @@ p {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
@@ -31,10 +35,12 @@ textarea{
   z-index: 100;
   position: fixed;
   width: 100%;
+  transition: top 0.3s;
 }
 
 .nav-wrapper {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   background-color: #03045e;
@@ -68,6 +74,8 @@ textarea{
 }
 
 .nav-menu button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   background-color: #90e0ef;
   border: none;
   font-size: 1.5rem;
@@ -88,7 +96,19 @@ textarea{
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 300;
+  animation: 0.5s;
+  animation-name: back-opacity;
+}
+
+@keyframes back-opacity {
+  0% {
+    background-color: rgba(53, 68, 99, 0);
+  }
+
+  100% {
+    background-color: rgba(53, 68, 99, 0.65);
+  }
 }
 
 #modal-front-screen {
@@ -97,10 +117,20 @@ textarea{
   align-items: center;
   font-family: "Bebas Neue", cursive;
   background-color: brown;
-  margin-top: 20vw;
+  margin-top: 15vw;
   margin-left: 15vw;
   height: 400px;
   width: 70vw;
+  animation: 0.5s;
+  animation-name: donation-slide;
+}
+
+/* Donation modal animation */
+
+@keyframes donation-slide {
+  0% {
+    transform: translateX(2000px);
+  }
 }
 
 #icons-modal-screen {
@@ -159,7 +189,8 @@ textarea{
     position: fixed;
     display: block;
     width: 100%;
-    z-index: 200;
+    z-index: 300;
+    transition: top 0.3s;
   }
 
   .nav-mobile-wrapper {
@@ -186,20 +217,26 @@ textarea{
   .nav-mobile-button button {
     background-color: #90e0ef;
     border: none;
-    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
     height: 2rem;
     min-width: 150px;
     margin-top: 7px;
     color: black;
   }
 
-  .nav-mobile-button button:active {
-    background-color: wheat;
-    color: black;
+  .nav-mobile-button button:hover{
     cursor: pointer;
   }
 
+  .nav-mobile-button button:active {
+    background-color: wheat;
+    color: black;
+  }
+
   .nav-mobile-burger {
+    position: relative;
     z-index: 400;
     color: white;
     margin-top: 7px;
@@ -207,8 +244,11 @@ textarea{
   }
 
   .nav-mobile-burger i:hover {
-    color: wheat;
     cursor: pointer;
+  }
+
+  .nav-mobile-burger i:active{
+    color: wheat;
   }
 
   #nav-mobile-drop {
@@ -216,7 +256,7 @@ textarea{
     width: 0;
     position: fixed;
     z-index: 200;
-    top: 44px;
+    top: 0px;
     left: 0;
     background-color: rgba(3, 4, 94, 0.9);
     overflow-x: hidden;
@@ -233,8 +273,10 @@ textarea{
 
   .nav-mobile-menu a {
     padding-bottom: 3vw;
-    font-size: 4vw;
     font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
     color: white;
   }
 
@@ -258,6 +300,18 @@ textarea{
     width: 100%;
     height: 100%;
     z-index: 1000;
+    animation: 0.5s;
+    animation-name: back-opacity;
+  }
+
+  @keyframes back-opacity {
+    0% {
+      background-color: rgba(53, 68, 99, 0);
+    }
+
+    100% {
+      background-color: rgba(53, 68, 99, 0.65);
+    }
   }
 
   #modal-front {
@@ -270,6 +324,14 @@ textarea{
     margin-left: 15vw;
     height: 400px;
     width: 70vw;
+    animation: 0.5s;
+    animation-name: donation-slide;
+  }
+
+  @keyframes donation-slide {
+    0% {
+      transform: translateX(700px);
+    }
   }
 
   #icons-modal {
@@ -480,48 +542,50 @@ textarea{
 }
 
 .fade {
-  -webkit-animation: fadeinout 2s linear;
-  animation: fadeinout 2s linear;
-  animation-delay: 5s;
-}
-
-@-webkit-keyframes fadeinout {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fadeinout 15s linear infinite;
 }
 
 @keyframes fadeinout {
   0% {
     opacity: 0;
   }
-  100% {
+
+  10% {
+    opacity: 0.33;
+  }
+
+  20% {
+    opacity: 0.66;
+  }
+
+  30% {
     opacity: 1;
   }
-}
 
-.fade {
-  -webkit-animation: fadeout 2s linear;
-  animation: fadeout 2s linear;
-  animation-delay: 6s;
-}
-
-@-webkit-keyframes fadeinout {
-  0% {
+  40% {
     opacity: 1;
   }
-  100% {
-    opacity: 0;
-  }
-}
 
-@keyframes fadeinout {
-  0% {
+  50% {
     opacity: 1;
   }
+
+  60% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
   100% {
     opacity: 0;
   }
@@ -529,18 +593,17 @@ textarea{
 
 /* contact */
 
-.contact{
+.contact {
   margin: 100px 0 0 0;
   background-color: #03045e;
-
 }
 
-.contact-form-img{
+.contact-form-img {
   display: flex;
   justify-content: space-between;
 }
 
-.contact-left{
+.contact-left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -549,18 +612,18 @@ textarea{
   width: 100%;
 }
 
-.contact-left h1{
-  font-family: 'Roboto', sans-serif; 
+.contact-left h1 {
+  font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-weight: 500;
   margin: 0 0 2vw 0;
 }
 
-.contact label{
+.contact label {
   color: white;
 }
 
-.contact input{
+.contact input {
   font-family: "Noto Sans JP", sans-serif;
   background-color: #354463;
   border: none;
@@ -571,7 +634,7 @@ textarea{
   border: 1px;
 }
 
-.contact textarea{
+.contact textarea {
   font-family: "Noto Sans JP", sans-serif;
   background-color: #354463;
   color: white;
@@ -582,54 +645,55 @@ textarea{
   margin: 7px 0 0 0;
 }
 
-.contact-form-img img{
+.contact-form-img img {
   width: 40vw;
   margin: 0 7vw 0 0;
 }
 
-.fname-wrapper label{
+.fname-wrapper label {
   margin: 0 5px 0 0;
 }
 
-.lname-wrapper label{
+.lname-wrapper label {
   margin: 0 18px 0 0;
 }
 
-.email-wrapper label{
+.email-wrapper label {
   margin: 0 15px 0 0;
 }
 
-.comment-wrapper label{
+.comment-wrapper label {
   vertical-align: top;
   margin: 0 15px 30px 0;
   padding-bottom: 40px;
 }
 
-.submit-wrapper{
+.submit-wrapper {
   margin: 1vw 0 0 51px;
 }
 
-.submit-wrapper button{
+.submit-wrapper button {
   border: none;
   background-color: #90e0ef;
   color: black;
-  font-family: 'Roboto', sans-serif;  
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
+  font-weight: 500;
   text-transform: uppercase;
   width: 340px;
   height: 2rem;
 }
 
-.submit-wrapper button:hover{
+.submit-wrapper button:hover {
   cursor: pointer;
 }
 
-.submit-wrapper button:active{
+.submit-wrapper button:active {
   background-color: wheat;
 }
 
-@media only screen and (max-width: 899px){
-  .contact{
+@media only screen and (max-width: 899px) {
+  .contact {
     background-image: url(img/quokkabottles-q-7T5hYd1gU-unsplash.jpg);
     background-size: 100%;
 
@@ -637,16 +701,14 @@ textarea{
     height: 100vw;
   }
 
-  .contact-left{
+  .contact-left {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 25vw 0 0 0;
-    
-    
   }
 
-  .contact-img{
+  .contact-img {
     display: none;
   }
 }

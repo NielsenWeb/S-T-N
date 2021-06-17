@@ -28,7 +28,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="nav-screen">
+    <nav class="nav-screen" id="navbar-screen">
       <div class="nav-wrapper">
         <div class="nav-logo">
           <a href="#"
@@ -36,8 +36,8 @@
           /></a>
         </div>
         <div class="nav-menu">
-          <a href="">We Support</a>
-          <a href="">Values</a>
+          <a href="#slideshow">We Support</a>
+          <a href="#contact">Values</a>
           <a href="">Shop</a>
           <a href="">Contact</a>
             <button onclick="openModalDonationScreen()">Donate Today</button>
@@ -47,7 +47,7 @@
     </nav>
 
     <div id="modal-donation-screen">
-      <div id="modal-front-screen">
+      <div class="donation-front" id="modal-front-screen">
         <div id="icons-modal-screen">
           <div id="close-icon-screen">
             <i  class="fas fa-times fa-lg" onclick="closeModalDonationScreen()"></i>
@@ -61,7 +61,7 @@
     </div>
 
     <!-- nav mobile -->
-    <nav class="nav-mobile">
+    <nav class="nav-mobile" id="navbar-mobile">
       <div class="nav-mobile-wrapper">
         <div class="nav-mobile-burger" onclick="dropDown()">
           <i class="fas fa-bars fa-2x"></i>
@@ -80,10 +80,10 @@
     <nav>
       <div id="nav-mobile-drop">
         <div class="nav-mobile-menu">
-          <a onclick="closeDropDown()" href="#">We Support</a>
+          <a onclick="closeDropDown()" href="#slideshow">We Support</a>
           <a onclick="closeDropDown()" href="#">Values</a>
           <a onclick="closeDropDown()" href="#">Shop</a>
-          <a onclick="closeDropDown()" href="#">Contact</a>
+          <a onclick="closeDropDown()" href="#contact">Contact</a>
         </div>
       </div>
 
@@ -158,9 +158,9 @@
 
     <!-- 4. section Slideahow -->
 
-    <div class="slideshow-container">
+    <div class="slideshow-container" id="slideshow">
 
-      <div class="mySlides fade" id="fading">
+      <div class="mySlides fade">
         <img src="img/slide-boat.png" style="width:100%">
       </div>
     
@@ -174,7 +174,7 @@
     
 
       <!-- contact -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact-form-img">
           <div class="contact-left">
             <h1>CONTACT</h1>
