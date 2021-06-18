@@ -14,10 +14,10 @@ var modalDonationScreen = document.getElementById("modal-donation-screen");
 var slideIndex = 0;
 
 /*contact validate */
-var mailformat =
+var mailformat = // requirements on email
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-var submitButton = document.getElementById("form-submit");
-var emailInput = document.getElementById("email-input");
+var submitButton = document.getElementById("form-submit"); // submit button
+var emailInput = document.getElementById("email-input"); 
 var fnameInput = document.getElementById("fname-input");
 var lnameInput = document.getElementById("lname-input");
 
@@ -39,11 +39,11 @@ window.onscroll = function () {
 
 /* mobile Dropdown */
 
-function dropDown() {
+function dropDown() { //transition css line 330
   if (dropMenu.style.width == "200px") {
-    dropMenu.style.width = "0";
+    dropMenu.style.width = "0"; // dropmenu forsvinder
     closeLayer.style.display = "none";
-    closeDropDown();
+    closeDropDown();//gør det muligt at lukke på burgeren igen med functionen nedenunder
   } else {
     closeLayer.style.display = "block";
     dropMenu.style.width = "200px";
@@ -90,15 +90,15 @@ function showSlides() {
 
 /* contact form validation */
 
-submitButton.addEventListener("click", function (event) {});
+submitButton.addEventListener("click", function (event) {}); //bonger ud når der trykkes på submit
 
 function validateLname() {
-  if (document.contact.lname.value == "") {
+  if (document.contact/* form navn */.lname.value == "") {
     lnameInput.style.borderStyle = "solid";
     lnameInput.style.borderColor = "red";
     document.contact.lname.focus();
     lnameInput.style.backgroundColor = "lightsalmon";
-    event.preventDefault();
+    event.preventDefault(); // forhindrer submit hvis betingelserne ikke er opfyldt
     return false;
   } else {
     lnameInput.style.borderStyle = "none";

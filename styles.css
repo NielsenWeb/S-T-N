@@ -90,7 +90,7 @@ textarea {
   cursor: pointer;
 }
 
-#modal-donation-screen {
+#modal-donation-screen { /* js styrer display linje 59 */
   display: none;
   background-color: rgba(53, 68, 99, 0.65);
   position: fixed;
@@ -327,7 +327,7 @@ textarea {
     top: 0px;
     left: 0;
     background-color: rgba(3, 4, 94, 0.9);
-    overflow-x: hidden;
+    overflow-x: hidden; /* skjuler links */
     transition: 1s;
     padding-top: 60px;
   }
